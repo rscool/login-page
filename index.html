@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="msrsmain.css">
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="data">
+        
+        <h1>Sign in</h1>
+        <form>
+        
+        <b>Email/Mobile:</b> &nbsp; &nbsp; &nbsp; &nbsp;  <input id="emmb" type="text" placeholder="Email/Mobile" required>
+        <br><br>
+        <b>Create Password:</b> &nbsp;  <input id="pass" type="password" placeholder="Password" required>
+        <br><br>
+         <hr>
+        <button  id="btn" type="submit" onsubmit="validate()"><b>Login</b></button>
+        <button><a href="http://127.0.0.1:5500/msrs.html" target="blank"><b>Signup</b></a></button>
+        <br><br>
+        <a href="#" onclick="fg()"><b>Forgot Password</b></a>
+
+        </form>
+    </div>
+
+    <script>
+
+        function fg(){
+            alert("Please have Badam and always remember it from next time.")
+        }
+
+        function validate(){
+
+        
+        let pass = document.getElementById("pass").value;
+
+        
+        if(pass.length < 6 || pass.length>10 ){
+            alert("Please Enter Coreect Password");
+        }
+
+        else alert("work in progress. Please Signup if you have'nt.");
+
+        }
+    </script>
+</body>
+</html>

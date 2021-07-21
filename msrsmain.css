@@ -1,0 +1,29 @@
+body{
+    margin: 60px 600px;
+    background-size: cover;
+    background-image: url("imgs/bg.jpg");  
+    /* background-position: center;   */
+    background-repeat: no-repeat;
+    font-family: Roboto Condensed,sans-serif!important;
+
+    
+}
+
+.data
+input:hover{
+    border: 2px solid rgb(43, 13, 13);
+    border-radius: 2px;
+}   
+
+.data{
+    border: 5px inset rgba(5, 3, 3, 0.356);
+    border-radius: 20px;
+    background: transparent;
+    padding: 20px 60px;
+}
+
+#btn:hover{
+   background-color: rgb(124, 33, 33);
+   color: white; 
+   cursor: pointer;
+}

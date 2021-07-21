@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="msrs.css">
+    <title>Log in/ Sign up</title>
+</head>
+<body>
+    <div class="data">
+        
+        <h1>Sign Up</h1>
+        <b>First Name </b>&nbsp; &nbsp; <input id="fn" type="text" placeholder="First name">
+        <br><br>
+        <b>Last Name</b> &nbsp; &nbsp; <input id="ln" type="text" placeholder="Last name">
+        <br><br>
+        <b>Email</b> &nbsp; &nbsp; &nbsp; &nbsp;  <input id="emmb" type="text" placeholder="Email">
+        <br><br>
+        <b>Mobile No.</b> &nbsp; &nbsp; &nbsp; &nbsp;  <input id="emmb" type="text" placeholder="Mobile No.">
+        <br><br>
+        <b>Create Password</b> &nbsp;  <input id="pass" type="password" placeholder="Password">
+        <br><br>
+        <b> Confirm Password</b> &nbsp;  <input id="passc" type="password" placeholder="Password">
+        <br><br>
+        <input type="checkbox" id="chkbx"> I have read all the Terms & Conditions.</input>
+        <hr>
+        <button  id="btn" type="submit" onclick="validate()"><b>Create Account</b></button>
+    
+    </div>
+
+    <script>
+        function validate(){
+        
+        var pass = document.getElementById("pass").value;
+        var passc = document.getElementById("passc").value;
+        let fn = document.getElementById("fn").value;
+        let ln = document.getElementById("ln").value;
+        let emmb = document.getElementById("emmb").value;
+        let chkbx = document.getElementById("chkbx");
+
+        
+        if(fn.trim() == ""  || ln.trim() == "" || emmb.trim() == "" ){
+            alert("Please fill all the fields");
+        }
+        else if(pass.length < 6 || pass.length>10 ){
+            alert("Password must be between 6 to 10 characters ");
+        }
+        else if(pass != passc){
+            alert("Both the passwords does not match");
+        }
+        else if(chkbx.checked == false){
+            alert("Please accept the terms and conditions");
+        }
+        
+        else{
+            alert("Congratulations Your account has been created");
+        }
+
+    }
+
+    </script>
+
+</html>
